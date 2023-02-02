@@ -17,11 +17,8 @@ const AddPostForm = () => {
     const onSavePostClicked = () => {
         if(title && content) {
             dispatch(
-                postAdded({
-                    id: nanoid(),
-                    title,
-                    content
-                })
+                // @ts-ignore
+                postAdded(title ,content)
             )
 
             setTitle('')
